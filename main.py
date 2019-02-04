@@ -11,8 +11,8 @@ class Turn(object):
             True: team_names[0],
             False: team_names[1]
         }
-        self.move = -1  # each turn has 2 moves, 0 and 1 for each move
-        self.turn = first  # True for left, False for right
+        self.move = 1  # each turn has 2 moves, 0 and 1 for each move, 0 after 1st, 1 after 2nd
+        self.turn = not first  # True for left, False for right
 
         self.sign_color = sign_color
         self.sign_pos = {
@@ -31,8 +31,13 @@ class Turn(object):
         print("Now is Move %d of 1. " % self.move)
 
     def draw_sign(self, screen):
-        # self.next_turn = self.turn if self.move < 1 else not self.turn
-        pygame.draw.circle(screen, self.sign_color, self.sign_pos[self.turn], self.sign_radius)
+        self.next_turn = self.turn if self.move == 0 else not self.turn
+        pygame.draw.circle(screen, self.sign_color, self.sign_pos[self.next_turn], self.sign_radius)
+
+    def __repr__(self):
+        return "Turn owned by %s at move %d" % (self.turn, self.move)
+
+    __str__ = __repr__
 
 
 class Tile(object):
@@ -48,11 +53,16 @@ class Tile(object):
         self.line_width = tile_line_width
 
     def draw(self, surf, colour, color1, color2):
-        if self.own == True:
+        if self.own is True:
             pygame.draw.rect(surf, color1, self.rect)
-        elif self.own == False:
+        elif self.own is False:
             pygame.draw.rect(surf, color2, self.rect)
         pygame.draw.rect(surf, colour, self.rect, self.line_width)
+
+    def __repr__(self):
+        return "tile at (%s, %s), owned by %s" % (self.tile_x, self.tile_y, self.own)
+
+    __str__ = __repr__
 
 
 class Board(object):  # TODO on board obj
@@ -94,7 +104,7 @@ def main():
     winwidth = 800
     winheight = 600
     screen = pygame.display.set_mode((winwidth, winheight))
-    pygame.display.set_caption("Board Game 0.0.1 Alpha - By Zyzzyva038")
+    pygame.display.set_caption("Blockin' Blocks 0.0.1 Alpha - By Zyzzyva038 & CG Studio")
 
     fpsclock = pygame.time.Clock()
     fps = 40
@@ -142,41 +152,23 @@ def main():
                             last_clicked = old_tile_clicked
                             tile_clicked = (tile.tile_x, tile.tile_y)
                             old_tile_clicked = tile_clicked
+                            turn.make_move()
 
         # UPDATE GAME STATE
         connections1 = connection.connection(tiles, lambda a: a.own is True)
         connections2 = connection.connection(tiles, lambda a: a.own is False)
         if tile_clicked:
-            if turn.move == -1:
-                turn.make_move()
-            elif turn.move == 0 and tiles[tile_clicked[0]][tile_clicked[1]].own == "neutral":
-                if start_mode and tile_clicked == last_clicked:
-                    for connect in connections2 if turn.turn is True else connections1:
-                        if any(((tile_clicked[0] - 1, tile_clicked[1]) in connect,
-                                (tile_clicked[0] + 1, tile_clicked[1]) in connect,
-                                (tile_clicked[0], tile_clicked[1] - 1) in connect,
-                                (tile_clicked[0], tile_clicked[1] + 1) in connect,)):
-                            turn.make_move()
-                            turn.make_move()
-                            tiles[tile_clicked[0]][tile_clicked[1]].own = turn.turn
-                            start_mode = False
-                            break
-                        else:
-                            turn.make_move()
-                else:
-                    turn.make_move()
-            elif turn.move == 1 and tile_clicked == last_clicked:
+            if turn.move == 1 and tile_clicked == last_clicked:
                 if tiles[tile_clicked[0]][tile_clicked[1]].own == "neutral":
-                    for connect in connections2 if turn.turn is True else connections1:
+                    for connect in connections1 if turn.turn is True else connections2:
                         if any(((tile_clicked[0] - 1, tile_clicked[1]) in connect,
                                 (tile_clicked[0] + 1, tile_clicked[1]) in connect,
                                 (tile_clicked[0], tile_clicked[1] - 1) in connect,
                                 (tile_clicked[0], tile_clicked[1] + 1) in connect,)):
-                            turn.make_move()
                             tiles[tile_clicked[0]][tile_clicked[1]].own = turn.turn
                             break
 
-            elif turn.move == 0:
+            elif turn.move == 1:
                 find = False
                 p1_tile, p1_tiles, p2_tile, p2_tiles = None, None, None, None
                 for i in connections1:
@@ -213,7 +205,6 @@ def main():
                         tiles[p2_tile[0]][p2_tile[1]].own = True
                     else:
                         tiles[p1_tile[0]][p1_tile[1]].own = False
-                    turn.make_move()
 
         #  DRAW SCREEN
         screen.fill(white)  # fill screen
