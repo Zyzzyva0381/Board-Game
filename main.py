@@ -1,6 +1,7 @@
 import pygame
 import sys
 import connection
+import random
 from pygame.locals import *
 
 
@@ -116,6 +117,7 @@ def main():
             tile_origin_y = board_origin[1] + y * board_height
             tiles[x][y] = Tile(board_width, board_height, (tile_origin_x, tile_origin_y), x, y)
     tiles[0][0].own = True
+    tiles[0][1].own = False
     tiles[-1][-1].own = False
 
     turn = Turn(("Left", "Right"), True, (225, 0, 0), ((100, 300), (700, 300)), 5)
@@ -173,6 +175,45 @@ def main():
                             turn.make_move()
                             tiles[tile_clicked[0]][tile_clicked[1]].own = turn.turn
                             break
+
+            elif turn.move == 0:
+                find = False
+                p1_tile, p1_tiles, p2_tile, p2_tiles = None, None, None, None
+                for i in connections1:
+                    if tile_clicked in i:
+                        p1_tiles = i
+                        p1_tile = tile_clicked
+                        find = True
+                        break
+                if find:
+                    for i in connections2:
+                        if last_clicked in i:
+                            p2_tiles = i
+                            p2_tile = last_clicked
+                else:
+                    for i in connections2:
+                        if tile_clicked in i:
+                            p2_tiles = i
+                            p2_tile = tile_clicked
+                            break
+                    for i in connections1:
+                        if last_clicked in i:
+                            p1_tiles = i
+                            p1_tile = last_clicked
+
+                if all((p1_tile, p1_tiles, p2_tile, p2_tiles)):
+                    p1_len = len(p1_tiles)
+                    p2_len = len(p2_tiles)
+                    rand = random.randint(1, p1_len + p2_len)
+                    if rand <= p1_len:
+                        p1_win = True
+                    else:
+                        p1_win = False
+                    if p1_win:
+                        tiles[p2_tile[0]][p2_tile[1]].own = True
+                    else:
+                        tiles[p1_tile[0]][p1_tile[1]].own = False
+                    turn.make_move()
 
         #  DRAW SCREEN
         screen.fill(white)  # fill screen
