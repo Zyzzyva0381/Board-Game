@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2bd2c19c-4027-47c6-995b-c6970710c92a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,20 +59,21 @@
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="py" value="759" />
-          <entry key="txt" value="103" />
+          <entry key="txt" value="184" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="103" />
+          <entry key="PLAIN_TEXT" value="184" />
           <entry key="Python" value="759" />
         </counts>
       </usages-collector>
@@ -94,10 +94,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3335">
+            <state relative-caret-position="129">
               <caret line="148" column="32" selection-start-line="148" selection-start-column="32" selection-end-line="148" selection-end-column="32" />
               <folding>
                 <marker date="1549172874197" expanded="true" signature="92:1088" ph="..." />
@@ -107,10 +107,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/connection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
+            <state relative-caret-position="361">
               <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
             </state>
           </provider>
@@ -147,6 +147,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -158,7 +159,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -261,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1549105659926</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="now with detection but with some (major) bugs about vertically check connections">
+      <created>1549275122587</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1549275122587</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -275,9 +282,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.45916796" visible="true" weight="0.24960998" />
-      <window_info id="Structure" order="1" sideWeight="0.54083204" side_tool="true" visible="true" weight="0.24960998" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.45762712" visible="true" weight="0.24960998" />
+      <window_info id="Structure" order="1" sideWeight="0.5423729" side_tool="true" visible="true" weight="0.24960998" />
       <window_info id="Favorites" order="2" sideWeight="0.51487416" side_tool="true" weight="0.24960998" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -286,7 +294,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3266564" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3276923" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3266564" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3266564" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32923076" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3276923" />
@@ -346,7 +354,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial" />
     <MESSAGE value="Now clicking one box twice can paint a color but with no detection&#10;Fixed an unknown bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Now clicking one box twice can paint a color but with no detection&#10;Fixed an unknown bug" />
+    <MESSAGE value="now with detection but with some (major) bugs about vertically check connections" />
+    <option name="LAST_COMMIT_MESSAGE" value="now with detection but with some (major) bugs about vertically check connections" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
@@ -372,21 +381,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/connection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3335">
+        <state relative-caret-position="129">
           <caret line="148" column="32" selection-start-line="148" selection-start-column="32" selection-end-line="148" selection-end-column="32" />
           <folding>
             <marker date="1549172874197" expanded="true" signature="92:1088" ph="..." />
             <marker date="1549172874197" expanded="true" signature="1107:2898" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
         </state>
       </provider>
     </entry>
