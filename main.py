@@ -1,5 +1,6 @@
 import pygame
 import sys
+import connection
 from pygame.locals import *
 
 
@@ -114,6 +115,8 @@ def main():
             tile_origin_x = board_origin[0] + x * board_width
             tile_origin_y = board_origin[1] + y * board_height
             tiles[x][y] = Tile(board_width, board_height, (tile_origin_x, tile_origin_y), x, y)
+    tiles[0][0].own = True
+    tiles[-1][-1].own = False
 
     turn = Turn(("Left", "Right"), True, (225, 0, 0), ((100, 300), (700, 300)), 5)
 
@@ -139,21 +142,37 @@ def main():
                             old_tile_clicked = tile_clicked
 
         # UPDATE GAME STATE
+        connections1 = connection.connection(tiles, lambda a: a.own is True)
+        connections2 = connection.connection(tiles, lambda a: a.own is False)
         if tile_clicked:
             if turn.move == -1:
                 turn.make_move()
             elif turn.move == 0 and tiles[tile_clicked[0]][tile_clicked[1]].own == "neutral":
                 if start_mode and tile_clicked == last_clicked:
-                    turn.make_move()
-                    turn.make_move()
-                    tiles[tile_clicked[0]][tile_clicked[1]].own = turn.turn
-                    start_mode = False
+                    for connect in connections2 if turn.turn is True else connections1:
+                        if any(((tile_clicked[0] - 1, tile_clicked[1]) in connect,
+                                (tile_clicked[0] + 1, tile_clicked[1]) in connect,
+                                (tile_clicked[0], tile_clicked[1] - 1) in connect,
+                                (tile_clicked[0], tile_clicked[1] + 1) in connect,)):
+                            turn.make_move()
+                            turn.make_move()
+                            tiles[tile_clicked[0]][tile_clicked[1]].own = turn.turn
+                            start_mode = False
+                            break
+                        else:
+                            turn.make_move()
                 else:
                     turn.make_move()
             elif turn.move == 1 and tile_clicked == last_clicked:
                 if tiles[tile_clicked[0]][tile_clicked[1]].own == "neutral":
-                    turn.make_move()
-                    tiles[tile_clicked[0]][tile_clicked[1]].own = turn.turn
+                    for connect in connections2 if turn.turn is True else connections1:
+                        if any(((tile_clicked[0] - 1, tile_clicked[1]) in connect,
+                                (tile_clicked[0] + 1, tile_clicked[1]) in connect,
+                                (tile_clicked[0], tile_clicked[1] - 1) in connect,
+                                (tile_clicked[0], tile_clicked[1] + 1) in connect,)):
+                            turn.make_move()
+                            tiles[tile_clicked[0]][tile_clicked[1]].own = turn.turn
+                            break
 
         #  DRAW SCREEN
         screen.fill(white)  # fill screen
