@@ -152,7 +152,7 @@ def main():
                             last_clicked = old_tile_clicked
                             tile_clicked = (tile.tile_x, tile.tile_y)
                             old_tile_clicked = tile_clicked
-                            turn.make_move()
+                            turn.make_move()  # TODO detect invalid moves
 
         # UPDATE GAME STATE
         connections1 = connection.connection(tiles, lambda a: a.own is True)
@@ -205,7 +205,7 @@ def main():
                         tiles[p2_tile[0]][p2_tile[1]].own = True
                     else:
                         tiles[p1_tile[0]][p1_tile[1]].own = False
-
+#  TODO add win detect
         #  DRAW SCREEN
         screen.fill(white)  # fill screen
 
