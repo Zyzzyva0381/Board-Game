@@ -199,23 +199,25 @@ def main():
                     revert_zero = True
                     for connect in connections1 if turn.turn is True else connections2:
                         if any(((tile_clicked[0] - 1, tile_clicked[1]) in connect,
-                                    (tile_clicked[0] + 1, tile_clicked[1]) in connect,
-                                    (tile_clicked[0], tile_clicked[1] - 1) in connect,
-                                    (tile_clicked[0], tile_clicked[1] + 1) in connect,)):
-                            revert_zero = False
-                            break
+                                (tile_clicked[0] + 1, tile_clicked[1]) in connect,
+                                (tile_clicked[0], tile_clicked[1] - 1) in connect,
+                                (tile_clicked[0], tile_clicked[1] + 1) in connect,)):
+                            if (0, 0) in connect or (num_board_width - 1, num_board_height - 1) in connect:
+                                revert_zero = False
+                                break
                     if revert_zero:
                         turn.revert_move()
                         zero_reverted = True
-            if turn.move == 1 and tile_clicked == last_clicked:
+            if turn.move == 1 and tile_clicked == last_clicked and not zero_reverted:
                 if tiles[tile_clicked[0]][tile_clicked[1]].own == "neutral":
                     for connect in connections1 if turn.turn is True else connections2:
                         if any(((tile_clicked[0] - 1, tile_clicked[1]) in connect,
                                 (tile_clicked[0] + 1, tile_clicked[1]) in connect,
                                 (tile_clicked[0], tile_clicked[1] - 1) in connect,
                                 (tile_clicked[0], tile_clicked[1] + 1) in connect,)):
-                            tiles[tile_clicked[0]][tile_clicked[1]].own = turn.turn
-                            break
+                            if (0, 0) in connect or (num_board_width - 1, num_board_height - 1) in connect:
+                                tiles[tile_clicked[0]][tile_clicked[1]].own = turn.turn
+                                break
 
             elif turn.move == 1 and not zero_reverted:
                 find = False
