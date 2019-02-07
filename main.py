@@ -88,6 +88,36 @@ class Board(object):  # TODO on board obj
                         print("Clicked tile at x=%d, y=%d. " % (tile.tile_x, tile.tile_y))
 
 
+def show_win_screen(surf, color_, win, pos, fps):
+    player_name = "Left" if win is True else "Right"
+
+    font = pygame.font.Font("fonts\\Mojangles.ttf", 50)
+    font_surf = font.render("Player %s wins! " % player_name, True, color_)
+    font_rect = font_surf.get_rect()
+    font_rect.center = pos
+
+    font2 = pygame.font.Font("fonts\\Lucida.ttf", 32)
+    button_surf = font2.render("New Game", True, (0, 255, 0), (50, 50, 255))
+    button_rect = button_surf.get_rect()
+    button_rect.center = (pos[0], pos[1] + 100)
+
+    fps_clock = pygame.time.Clock()
+
+    while True:
+        surf.fill((255, 255, 255))
+        surf.blit(font_surf, font_rect)
+        surf.blit(button_surf, button_rect)
+        pygame.display.update()
+
+        check_quit()
+        for event in pygame.event.get():
+            if event.type == MOUSEBUTTONUP:
+                if button_rect.collidepoint(event.pos):
+                    main()
+
+        fps_clock.tick(fps)
+
+
 def terminate():
     pygame.quit()
     sys.exit()
@@ -133,8 +163,6 @@ def main():
     turn = Turn(("Left", "Right"), True, (225, 0, 0), ((100, 300), (700, 300)), 5)
 
     old_tile_clicked = None
-
-    start_mode = True
 
     while True:  # MAIN LOOP
 
@@ -205,7 +233,14 @@ def main():
                         tiles[p2_tile[0]][p2_tile[1]].own = True
                     else:
                         tiles[p1_tile[0]][p1_tile[1]].own = False
-#  TODO add win detect
+
+        if tiles[0][1].own is False or tiles[1][0].own is False:
+            print("Player right wins. ")
+            show_win_screen(screen, red, False, (winwidth / 2, winheight / 2), fps)
+        if tiles[-1][-2].own is True or tiles[-2][-1].own is True:
+            print("Player left wins. ")
+            show_win_screen(screen, red, True, (winwidth / 2, winheight / 2), fps)
+
         #  DRAW SCREEN
         screen.fill(white)  # fill screen
 
