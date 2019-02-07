@@ -30,6 +30,13 @@ class Turn(object):
             print("Now Player %s is in turn. " % self.turn_dict[self.turn])
         print("Now is Move %d of 1. " % self.move)
 
+    def revert_move(self):
+        self.move -= 1
+        if self.move < 0:
+            self.turn = not self.turn
+            self.move = 1
+        print("Move invalid. ")
+
     def draw_sign(self, screen):
         self.next_turn = self.turn if self.move == 0 else not self.turn
         pygame.draw.circle(screen, self.sign_color, self.sign_pos[self.next_turn], self.sign_radius)
@@ -157,7 +164,7 @@ def main():
             tile_origin_y = board_origin[1] + y * board_height
             tiles[x][y] = Tile(board_width, board_height, (tile_origin_x, tile_origin_y), x, y)
     tiles[0][0].own = True
-    tiles[0][1].own = False
+    tiles[0][2].own = False
     tiles[-1][-1].own = False
 
     turn = Turn(("Left", "Right"), True, (225, 0, 0), ((100, 300), (700, 300)), 5)
@@ -186,6 +193,20 @@ def main():
         connections1 = connection.connection(tiles, lambda a: a.own is True)
         connections2 = connection.connection(tiles, lambda a: a.own is False)
         if tile_clicked:
+            zero_reverted = False
+            if turn.move == 0:
+                if tiles[tile_clicked[0]][tile_clicked[1]].own == "neutral":
+                    revert_zero = True
+                    for connect in connections1 if turn.turn is True else connections2:
+                        if any(((tile_clicked[0] - 1, tile_clicked[1]) in connect,
+                                    (tile_clicked[0] + 1, tile_clicked[1]) in connect,
+                                    (tile_clicked[0], tile_clicked[1] - 1) in connect,
+                                    (tile_clicked[0], tile_clicked[1] + 1) in connect,)):
+                            revert_zero = False
+                            break
+                    if revert_zero:
+                        turn.revert_move()
+                        zero_reverted = True
             if turn.move == 1 and tile_clicked == last_clicked:
                 if tiles[tile_clicked[0]][tile_clicked[1]].own == "neutral":
                     for connect in connections1 if turn.turn is True else connections2:
@@ -196,7 +217,7 @@ def main():
                             tiles[tile_clicked[0]][tile_clicked[1]].own = turn.turn
                             break
 
-            elif turn.move == 1:
+            elif turn.move == 1 and not zero_reverted:
                 find = False
                 p1_tile, p1_tiles, p2_tile, p2_tiles = None, None, None, None
                 for i in connections1:
@@ -221,7 +242,9 @@ def main():
                             p1_tiles = i
                             p1_tile = last_clicked
 
-                if all((p1_tile, p1_tiles, p2_tile, p2_tiles)):
+                if (all((p1_tile, p1_tiles, p2_tile, p2_tiles))
+                    and p1_tile in ((p2_tile[0] - 1, p2_tile[1]), (p2_tile[0] + 1, p2_tile[1]),
+                                    (p2_tile[0], p2_tile[1] - 1), (p2_tile[0], p2_tile[1] + 1))):
                     p1_len = len(p1_tiles)
                     p2_len = len(p2_tiles)
                     rand = random.randint(1, p1_len + p2_len)
@@ -233,13 +256,9 @@ def main():
                         tiles[p2_tile[0]][p2_tile[1]].own = True
                     else:
                         tiles[p1_tile[0]][p1_tile[1]].own = False
-
-        if tiles[0][1].own is False or tiles[1][0].own is False:
-            print("Player right wins. ")
-            show_win_screen(screen, red, False, (winwidth / 2, winheight / 2), fps)
-        if tiles[-1][-2].own is True or tiles[-2][-1].own is True:
-            print("Player left wins. ")
-            show_win_screen(screen, red, True, (winwidth / 2, winheight / 2), fps)
+                else:
+                    turn.revert_move()
+                    turn.revert_move()
 
         #  DRAW SCREEN
         screen.fill(white)  # fill screen
@@ -251,6 +270,16 @@ def main():
         turn.draw_sign(screen)
 
         pygame.display.update()
+
+        # check if won
+        if tiles[0][1].own is False or tiles[1][0].own is False:
+            print("Player right wins. ")
+            pygame.time.wait(1000)
+            show_win_screen(screen, red, False, (winwidth / 2, winheight / 2), fps)
+        if tiles[-1][-2].own is True or tiles[-2][-1].own is True:
+            print("Player left wins. ")
+            pygame.time.wait(1000)
+            show_win_screen(screen, red, True, (winwidth / 2, winheight / 2), fps)
 
         # TICK FPS
         fpsclock.tick(fps)
