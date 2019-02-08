@@ -17,7 +17,7 @@ def connection(inpl, valid):
                     connects.append(set([(line_num, item_num)]))
 
     # detects connects vertically
-    for i in reversed(list(range(len(connects)))):
+    for i in reversed(list(range(len(connects)))):  # TODO still sth wrong
         if i == 0:
             break
         break_ = False

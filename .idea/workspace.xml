@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2bd2c19c-4027-47c6-995b-c6970710c92a" name="Default Changelist" comment="forgot the font files when committing the won screen">
+    <list default="true" id="2bd2c19c-4027-47c6-995b-c6970710c92a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/connection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,40 +62,42 @@
     <session id="-1432496641">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
+          <entry key="project.closed" value="20" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.11" value="2" />
-          <entry key="project.open.time.12" value="2" />
+          <entry key="project.open.time.11" value="3" />
+          <entry key="project.open.time.12" value="3" />
           <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.14" value="2" />
+          <entry key="project.open.time.14" value="3" />
           <entry key="project.open.time.15" value="3" />
           <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="192" />
-          <entry key="py" value="3408" />
-          <entry key="txt" value="465" />
+          <entry key="py" value="4364" />
+          <entry key="txt" value="520" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="465" />
-          <entry key="Python" value="3600" />
+          <entry key="PLAIN_TEXT" value="520" />
+          <entry key="Python" value="4556" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="png" value="2" />
           <entry key="py" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="Image" value="2" />
           <entry key="Python" value="5" />
         </counts>
       </usages-collector>
@@ -108,13 +111,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="210" column="84" selection-start-line="210" selection-start-column="84" selection-end-line="210" selection-end-column="84" />
+            <state relative-caret-position="-4278">
+              <caret line="63" column="49" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1549545153212" expanded="true" signature="106:1427" ph="..." />
-                <marker date="1549545153212" expanded="true" signature="953:1104" ph="..." />
-                <marker date="1549545153212" expanded="true" signature="1446:4319" ph="..." />
+                <marker date="1549631012121" expanded="true" signature="106:1427" ph="..." />
+                <marker date="1549631012121" expanded="true" signature="953:1104" ph="..." />
+                <marker date="1549631012121" expanded="true" signature="1446:4907" ph="..." />
+                <marker date="1549631012121" expanded="true" signature="2371:2769" ph="..." />
               </folding>
             </state>
           </provider>
@@ -123,8 +127,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/connection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+            <state relative-caret-position="552">
+              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -179,6 +183,11 @@
               <item name="Board-Game" type="b2602c69:ProjectViewProjectNode" />
               <item name="Board-Game" type="462c0819:PsiDirectoryNode" />
               <item name="fonts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Board-Game" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Board-Game" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -259,7 +268,6 @@
     </recent_temporary>
   </component>
   <component name="StructureViewFactory">
-    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
     <option name="ACTIVE_ACTIONS" value=",SHOW_INHERITED" />
   </component>
   <component name="SvnConfiguration">
@@ -343,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1549544006325</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="now cannot put color to tiles unconnected to the base">
+      <created>1549545403290</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1549545403290</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -359,11 +374,11 @@
     <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.44292238" visible="true" weight="0.24960998" />
-      <window_info id="Structure" order="1" sideWeight="0.55707765" side_tool="true" visible="true" weight="0.24960998" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.43835616" visible="true" weight="0.24960998" />
+      <window_info id="Structure" order="1" sideWeight="0.56164384" side_tool="true" visible="true" weight="0.24960998" />
       <window_info id="Favorites" order="2" sideWeight="0.51487416" side_tool="true" weight="0.24960998" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32973805" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32511556" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3990755" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -396,6 +411,16 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -437,7 +462,8 @@
     <MESSAGE value="now with win screen" />
     <MESSAGE value="added check for invalid moves" />
     <MESSAGE value="forgot the font files when committing the won screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="forgot the font files when committing the won screen" />
+    <MESSAGE value="now cannot put color to tiles unconnected to the base" />
+    <option name="LAST_COMMIT_MESSAGE" value="now cannot put color to tiles unconnected to the base" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -445,7 +471,7 @@
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <condition expression="tile_clicked" language="Python" />
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>194</line>
+          <line>218</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
@@ -514,23 +540,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/connection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="210" column="84" selection-start-line="210" selection-start-column="84" selection-end-line="210" selection-end-column="84" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1549545153212" expanded="true" signature="106:1427" ph="..." />
-            <marker date="1549545153212" expanded="true" signature="953:1104" ph="..." />
-            <marker date="1549545153212" expanded="true" signature="1446:4319" ph="..." />
-          </folding>
+        <state relative-caret-position="552">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/connection.py">
+    <entry file="file://$PROJECT_DIR$/resources/block.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+        <state relative-caret-position="-4278">
+          <caret line="63" column="49" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1549631012121" expanded="true" signature="106:1427" ph="..." />
+            <marker date="1549631012121" expanded="true" signature="953:1104" ph="..." />
+            <marker date="1549631012121" expanded="true" signature="1446:4907" ph="..." />
+            <marker date="1549631012121" expanded="true" signature="2371:2769" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

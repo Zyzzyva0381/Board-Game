@@ -59,12 +59,23 @@ class Tile(object):
         self.state = "blank"
         self.line_width = tile_line_width
 
-    def draw(self, surf, colour, color1, color2):
+    def draw(self, surf, colour, resources, num_width, num_height):  # TODO
+        if (self.tile_x % 2 == 0 and self.tile_y % 2 == 1) or (self.tile_x % 2 == 1 and self.tile_y % 2 == 0):
+            pygame.draw.rect(surf, (150, 150, 150), self.rect)
+        else:
+            pygame.draw.rect(surf, (200, 200, 200), self.rect)
+        surf.blit(self._get_resource(resources, num_width, num_height), self.rect)
+
+    def _get_resource(self, resources, num_width, num_height):
+        if self.tile_x == 0 and self.tile_y == 0:
+            return resources["home_left"]
+        if self.tile_x == num_width - 1 and self.tile_y == num_height - 1:
+            return resources["home_right"]
         if self.own is True:
-            pygame.draw.rect(surf, color1, self.rect)
-        elif self.own is False:
-            pygame.draw.rect(surf, color2, self.rect)
-        pygame.draw.rect(surf, colour, self.rect, self.line_width)
+            return resources["room_left"]
+        if self.own is False:
+            return resources["room_right"]
+        return pygame.Surface((0, 0))
 
     def __repr__(self):
         return "tile at (%s, %s), owned by %s" % (self.tile_x, self.tile_y, self.own)
@@ -79,7 +90,7 @@ class Board(object):  # TODO on board obj
             for y in range(num_board_height):
                 tile_origin_x = board_origin[0] + x * board_width
                 tile_origin_y = board_origin[1] + y * board_height
-                tiles[x][y] = Tile(board_width, board_height, (tile_origin_x, tile_origin_y), x, y)
+                tiles[x][y] = Tile(board_width, board_height, (tile_origin_x, tile_origin_y), x, y)  # note
         self.tiles = tiles
 
     def draw(self, surf, colour):
@@ -142,6 +153,7 @@ def main():
     winheight = 600
     screen = pygame.display.set_mode((winwidth, winheight))
     pygame.display.set_caption("Blockin' Blocks 0.0.1 Alpha - By Zyzzyva038 & CG Studio")
+    pygame.display.set_icon(pygame.image.load("resources\\logo.jpg"))
 
     fpsclock = pygame.time.Clock()
     fps = 40
@@ -157,6 +169,19 @@ def main():
     num_board_width = 10
     num_board_height = 11
 
+    resources = {
+        "home_left": pygame.transform.scale(pygame.image.load("resources\\home_left.png"),
+                                            (board_width, board_height), ),
+        "home_right": pygame.transform.scale(pygame.image.load("resources\\home_right.png"),
+                                             (board_width, board_height), ),
+        "room_left": pygame.transform.scale(pygame.image.load("resources\\room_left.png"),
+                                            (board_width, board_height), ),
+        "room_right": pygame.transform.scale(pygame.image.load("resources\\room_right.png"),
+                                             (board_width, board_height), ),
+        "block": pygame.transform.scale(pygame.image.load("resources\\block.png"),
+                                        (board_width, board_height), ),
+    }
+
     tiles = [[[] for _ in range(num_board_height)] for __ in range(num_board_width)]
     for x in range(num_board_width):
         for y in range(num_board_height):
@@ -164,7 +189,6 @@ def main():
             tile_origin_y = board_origin[1] + y * board_height
             tiles[x][y] = Tile(board_width, board_height, (tile_origin_x, tile_origin_y), x, y)
     tiles[0][0].own = True
-    tiles[0][2].own = False
     tiles[-1][-1].own = False
 
     turn = Turn(("Left", "Right"), True, (225, 0, 0), ((100, 300), (700, 300)), 5)
@@ -267,7 +291,7 @@ def main():
 
         for line in tiles:  # draw board
             for tile in line:
-                tile.draw(screen, black, red, blue)
+                tile.draw(screen, black, resources, num_board_width, num_board_height)
 
         turn.draw_sign(screen)
 
