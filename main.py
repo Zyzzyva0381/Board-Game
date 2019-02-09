@@ -243,6 +243,9 @@ def main():
                             if (0, 0) in connect or (num_board_width - 1, num_board_height - 1) in connect:
                                 tiles[tile_clicked[0]][tile_clicked[1]].own = turn.turn
                                 break
+                else:
+                    turn.revert_move()
+                    turn.revert_move()
 
             elif turn.move == 1 and not zero_reverted:
                 find = False
