@@ -152,7 +152,7 @@ def main():
     winwidth = 800
     winheight = 600
     screen = pygame.display.set_mode((winwidth, winheight))
-    pygame.display.set_caption("Blockin' Blocks 0.0.1 Alpha - By Zyzzyva038 & CG Studio")
+    pygame.display.set_caption("Blockin' Blocks 0.0.1 Beta - By Zyzzyva038 & CG Studio")
     pygame.display.set_icon(pygame.image.load("resources\\logo.jpg"))
 
     fpsclock = pygame.time.Clock()

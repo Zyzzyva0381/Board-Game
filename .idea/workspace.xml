@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2bd2c19c-4027-47c6-995b-c6970710c92a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/connection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +60,7 @@
     <session id="-1432496641">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="21" />
+          <entry key="project.closed" value="22" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="4" />
@@ -80,12 +78,12 @@
         <counts>
           <entry key="Python Console" value="192" />
           <entry key="py" value="4447" />
-          <entry key="txt" value="540" />
+          <entry key="txt" value="568" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="540" />
+          <entry key="PLAIN_TEXT" value="568" />
           <entry key="Python" value="4639" />
         </counts>
       </usages-collector>
@@ -108,11 +106,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2156">
-              <caret line="191" column="14" selection-start-line="191" selection-start-column="14" selection-end-line="191" selection-end-column="14" />
+            <state relative-caret-position="332">
+              <caret line="293" selection-start-line="293" selection-end-line="293" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
                 <marker date="1549686122633" expanded="true" signature="106:1427" ph="..." />
@@ -124,7 +122,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/connection.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
@@ -365,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1549631561811</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fixed a bug about connection">
+      <created>1549686793604</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1549686793604</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -379,14 +384,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.43607306" visible="true" weight="0.24960998" />
-      <window_info id="Structure" order="1" sideWeight="0.56392694" side_tool="true" visible="true" weight="0.24960998" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4375963" visible="true" weight="0.24960998" />
+      <window_info id="Structure" order="1" sideWeight="0.5624037" side_tool="true" visible="true" weight="0.24960998" />
       <window_info id="Favorites" order="2" sideWeight="0.51487416" side_tool="true" weight="0.24960998" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32973805" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32511556" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32511556" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3990755" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -471,12 +475,13 @@
     <MESSAGE value="forgot the font files when committing the won screen" />
     <MESSAGE value="now cannot put color to tiles unconnected to the base" />
     <MESSAGE value="added some resources" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some resources" />
+    <MESSAGE value="fixed a bug about connection" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed a bug about connection" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <condition expression="tile_clicked" language="Python" />
           <url>file://$PROJECT_DIR$/main.py</url>
           <line>219</line>
@@ -551,10 +556,17 @@
     <entry file="file://$PROJECT_DIR$/resources/block.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/connection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2156">
-          <caret line="191" column="14" selection-start-line="191" selection-start-column="14" selection-end-line="191" selection-end-column="14" />
+        <state relative-caret-position="332">
+          <caret line="293" selection-start-line="293" selection-end-line="293" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
             <marker date="1549686122633" expanded="true" signature="106:1427" ph="..." />
@@ -562,13 +574,6 @@
             <marker date="1549686122633" expanded="true" signature="1446:4907" ph="..." />
             <marker date="1549686122633" expanded="true" signature="2371:2769" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
         </state>
       </provider>
     </entry>
