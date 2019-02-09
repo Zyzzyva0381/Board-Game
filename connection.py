@@ -17,16 +17,19 @@ def connection(inpl, valid):
                     connects.append(set([(line_num, item_num)]))
 
     # detects connects vertically
-    for i in reversed(list(range(len(connects)))):  # TODO still sth wrong
+    for i in reversed(list(range(len(connects)))):  # TODO still sth wrong if not fixed
         if i == 0:
             break
         break_ = False
         for pos in connects[i]:
-            for pos2 in connects[i - 1]:
-                if pos2[0] == pos[0] - 1:
-                    connects[i - 1] = connects[i - 1] | connects[i]
-                    connects.pop(i)
-                    break_ = True
+            for j in range(i):
+                for pos2 in connects[j]:
+                    if pos2[0] == pos[0] - 1:
+                        connects[j] = connects[j] | connects[i]
+                        connects.pop(i)
+                        break_ = True
+                        break
+                if break_:
                     break
             if break_:
                 break
