@@ -107,7 +107,7 @@ class Board(object):  # TODO on board obj
 
 
 def show_win_screen(surf, color_, win, pos, fps):
-    player_name = "Left" if win is True else "Right"
+    player_name = "Red" if win is True else "Blue"
 
     font = pygame.font.Font("fonts\\Mojangles.ttf", 50)
     font_surf = font.render("Player %s wins! " % player_name, True, color_)
@@ -189,7 +189,7 @@ def main():
             tile_origin_y = board_origin[1] + y * board_height
             tiles[x][y] = Tile(board_width, board_height, (tile_origin_x, tile_origin_y), x, y)
     tiles[0][0].own = True
-    tiles[0][2].own = False
+    tiles[0][1].own = False
     tiles[-1][-1].own = False
 
     turn = Turn(("Left", "Right"), True, (225, 0, 0), ((100, 300), (700, 300)), 5)
