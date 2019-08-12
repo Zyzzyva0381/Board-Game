@@ -214,8 +214,8 @@ def main():
                             turn.make_move()  # TODO detect invalid moves
 
         # UPDATE GAME STATE
-        connections1 = connection.connection(tiles, lambda a: a.own is True)
-        connections2 = connection.connection(tiles, lambda a: a.own is False)
+        connections1 = connection.connection2(tiles, lambda a: a.own is True)
+        connections2 = connection.connection2(tiles, lambda a: a.own is False)
         if tile_clicked:
             zero_reverted = False
             if turn.move == 0:

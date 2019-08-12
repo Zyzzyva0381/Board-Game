@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2bd2c19c-4027-47c6-995b-c6970710c92a" name="Default Changelist" comment="">
+    <list default="true" id="2bd2c19c-4027-47c6-995b-c6970710c92a" name="Default Changelist" comment="huh">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/connection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,43 +62,49 @@
     <session id="-1432496641">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="23" />
-          <entry key="project.open.time.1" value="3" />
+          <entry key="project.closed" value="39" />
+          <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.11" value="5" />
-          <entry key="project.open.time.12" value="3" />
-          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.11" value="7" />
+          <entry key="project.open.time.12" value="6" />
+          <entry key="project.open.time.13" value="3" />
           <entry key="project.open.time.14" value="3" />
           <entry key="project.open.time.15" value="4" />
-          <entry key="project.open.time.16" value="2" />
+          <entry key="project.open.time.16" value="5" />
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="24" />
+          <entry key="project.opened" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="192" />
-          <entry key="py" value="4522" />
-          <entry key="txt" value="633" />
+          <entry key="py" value="5874" />
+          <entry key="txt" value="661" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="633" />
-          <entry key="Python" value="4714" />
+          <entry key="PLAIN_TEXT" value="661" />
+          <entry key="Python" value="6066" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="gitignore" value="1" />
           <entry key="png" value="2" />
-          <entry key="py" value="5" />
+          <entry key="py" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="2" />
-          <entry key="Python" value="5" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Python" value="7" />
         </counts>
       </usages-collector>
     </session>
@@ -110,14 +117,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-282">
-              <caret line="191" column="14" selection-start-line="191" selection-start-column="14" selection-end-line="191" selection-end-column="14" />
+            <state relative-caret-position="83">
+              <caret line="218" column="24" lean-forward="true" selection-start-line="218" selection-start-column="24" selection-end-line="218" selection-end-column="24" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1549693292882" expanded="true" signature="106:1427" ph="..." />
-                <marker date="1549693292882" expanded="true" signature="953:1104" ph="..." />
-                <marker date="1549693292882" expanded="true" signature="1446:4905" ph="..." />
-                <marker date="1549693292882" expanded="true" signature="2371:2769" ph="..." />
+                <marker date="1565582045917" expanded="true" signature="106:1427" ph="..." />
+                <marker date="1565582045917" expanded="true" signature="953:1104" ph="..." />
+                <marker date="1565582045917" expanded="true" signature="1446:4905" ph="..." />
+                <marker date="1565582045917" expanded="true" signature="2371:2769" ph="..." />
               </folding>
             </state>
           </provider>
@@ -126,8 +133,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/connection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+            <state relative-caret-position="231">
+              <caret line="45" column="27" lean-forward="true" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../connection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" selection-end-line="35" selection-end-column="22" />
+              <folding>
+                <marker date="1565584116567" expanded="true" signature="28:33" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -155,29 +174,34 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/connection.py" />
+        <option value="$PROJECT_DIR$/connection2.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/../../../connection.py" />
+        <option value="$PROJECT_DIR$/connection.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="41" />
-    <option name="y" value="-16" />
-    <option name="width" value="1284" />
-    <option name="height" value="728" />
+    <option name="x" value="-7" />
+    <option name="width" value="666" />
+    <option name="height" value="775" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Board-Game" type="b2602c69:ProjectViewProjectNode" />
               <item name="Board-Game" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Board-Game" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Board-Game" type="462c0819:PsiDirectoryNode" />
+              <item name="audio" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Board-Game" type="b2602c69:ProjectViewProjectNode" />
@@ -189,16 +213,21 @@
               <item name="Board-Game" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Board-Game" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -213,6 +242,27 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.main">
+    <configuration name="connection (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="~Board-Game" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../.." />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../connection.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="connection" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="~Board-Game" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -258,10 +308,12 @@
     <list>
       <item itemvalue="Python.main" />
       <item itemvalue="Python.connection" />
+      <item itemvalue="Python.connection (1)" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.connection (1)" />
         <item itemvalue="Python.connection" />
       </list>
     </recent_temporary>
@@ -385,7 +437,21 @@
       <option name="project" value="LOCAL" />
       <updated>1549693093240</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="altered player names">
+      <created>1549693708693</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1549693708693</updated>
+    </task>
+    <task id="LOCAL-00017" summary="huh">
+      <created>1549693773835</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1549693773835</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -401,19 +467,20 @@
     <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4347826" visible="true" weight="0.24960998" />
-      <window_info id="Structure" order="1" sideWeight="0.5652174" side_tool="true" visible="true" weight="0.24960998" />
-      <window_info id="Favorites" order="2" sideWeight="0.51487416" side_tool="true" weight="0.24960998" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.41602466" visible="true" weight="0.25663027" />
+      <window_info id="Structure" order="1" sideWeight="0.5839754" side_tool="true" weight="0.25663027" />
+      <window_info id="Favorites" order="2" sideWeight="0.5839754" side_tool="true" weight="0.25663027" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32973805" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3266564" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49921995" visible="true" weight="0.3266564" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3990755" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3266564" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32153845" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.34822804" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3266564" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32923076" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50078005" side_tool="true" weight="0.3266564" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3266564" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -494,7 +561,9 @@
     <MESSAGE value="fixed a bug about connection" />
     <MESSAGE value="now on Beta!" />
     <MESSAGE value="fixed a bug about re-clicking colored tiles" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed a bug about re-clicking colored tiles" />
+    <MESSAGE value="altered player names" />
+    <MESSAGE value="huh" />
+    <option name="LAST_COMMIT_MESSAGE" value="huh" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -502,8 +571,23 @@
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <condition expression="tile_clicked" language="Python" />
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>219</line>
+          <line>218</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>216</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>217</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../connection.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -525,6 +609,7 @@
         <watch expression="tile_clicked" />
         <watch expression="last_clicked" />
         <watch expression="tiles" />
+        <watch expression="inpl" />
       </configuration>
     </watches-manager>
   </component>
@@ -537,6 +622,16 @@
       </expression>
     </expressions>
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>2</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>valid(2)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>connections1</expression-string>
         <language-id>Python</language-id>
@@ -574,24 +669,38 @@
     <entry file="file://$PROJECT_DIR$/resources/block.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connection2.py" />
+    <entry file="file://$PROJECT_DIR$/../../../connection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-282">
-          <caret line="191" column="14" selection-start-line="191" selection-start-column="14" selection-end-line="191" selection-end-column="14" />
+        <state>
+          <caret lean-forward="true" selection-end-line="35" selection-end-column="22" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1549693292882" expanded="true" signature="106:1427" ph="..." />
-            <marker date="1549693292882" expanded="true" signature="953:1104" ph="..." />
-            <marker date="1549693292882" expanded="true" signature="1446:4905" ph="..." />
-            <marker date="1549693292882" expanded="true" signature="2371:2769" ph="..." />
+            <marker date="1565584116567" expanded="true" signature="28:33" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/connection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+        <state relative-caret-position="231">
+          <caret line="45" column="27" lean-forward="true" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="218" column="24" lean-forward="true" selection-start-line="218" selection-start-column="24" selection-end-line="218" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1565582045917" expanded="true" signature="106:1427" ph="..." />
+            <marker date="1565582045917" expanded="true" signature="953:1104" ph="..." />
+            <marker date="1565582045917" expanded="true" signature="1446:4905" ph="..." />
+            <marker date="1565582045917" expanded="true" signature="2371:2769" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
