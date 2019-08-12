@@ -121,6 +121,8 @@ def show_win_screen(surf, color_, win, pos, fps):
 
     fps_clock = pygame.time.Clock()
 
+    pygame.mixer.music.play(3)
+
     while True:
         surf.fill((255, 255, 255))
         surf.blit(font_surf, font_rect)
@@ -194,6 +196,8 @@ def main():
     turn = Turn(("Left", "Right"), True, (225, 0, 0), ((100, 300), (700, 300)), 5)
 
     old_tile_clicked = None
+
+    pygame.mixer.music.load("audio\\piano2.ogg")
 
     while True:  # MAIN LOOP
 

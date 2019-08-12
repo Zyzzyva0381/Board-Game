@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2bd2c19c-4027-47c6-995b-c6970710c92a" name="Default Changelist" comment="huh">
+    <list default="true" id="2bd2c19c-4027-47c6-995b-c6970710c92a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/connection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,11 +61,11 @@
     <session id="-1432496641">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="39" />
+          <entry key="project.closed" value="41" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.11" value="7" />
-          <entry key="project.open.time.12" value="6" />
+          <entry key="project.open.time.11" value="8" />
+          <entry key="project.open.time.12" value="7" />
           <entry key="project.open.time.13" value="3" />
           <entry key="project.open.time.14" value="3" />
           <entry key="project.open.time.15" value="4" />
@@ -77,20 +76,20 @@
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="40" />
+          <entry key="project.opened" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="192" />
-          <entry key="py" value="5874" />
-          <entry key="txt" value="661" />
+          <entry key="py" value="6008" />
+          <entry key="txt" value="750" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="661" />
-          <entry key="Python" value="6066" />
+          <entry key="PLAIN_TEXT" value="750" />
+          <entry key="Python" value="6200" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -117,14 +116,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="218" column="24" lean-forward="true" selection-start-line="218" selection-start-column="24" selection-end-line="218" selection-end-column="24" />
+            <state relative-caret-position="92">
+              <caret line="193" column="14" selection-start-line="193" selection-start-column="14" selection-end-line="193" selection-end-column="14" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1565582045917" expanded="true" signature="106:1427" ph="..." />
-                <marker date="1565582045917" expanded="true" signature="953:1104" ph="..." />
-                <marker date="1565582045917" expanded="true" signature="1446:4905" ph="..." />
-                <marker date="1565582045917" expanded="true" signature="2371:2769" ph="..." />
+                <marker date="1565593120526" expanded="true" signature="106:1427" ph="..." />
+                <marker date="1565593120526" expanded="true" signature="953:1104" ph="..." />
+                <marker date="1565593120526" expanded="true" signature="1446:4937" ph="..." />
+                <marker date="1565593120526" expanded="true" signature="2371:2769" ph="..." />
               </folding>
             </state>
           </provider>
@@ -133,20 +132,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/connection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="45" column="27" lean-forward="true" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../connection.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" selection-end-line="35" selection-end-column="22" />
-              <folding>
-                <marker date="1565584116567" expanded="true" signature="28:33" ph="..." />
-              </folding>
+            <state relative-caret-position="1035">
+              <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -175,9 +162,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/connection2.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/../../../connection.py" />
         <option value="$PROJECT_DIR$/connection.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -191,6 +178,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -221,7 +209,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -451,7 +438,21 @@
       <option name="project" value="LOCAL" />
       <updated>1549693773835</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="fixed a major bug about connections,&#10;added a function connection2">
+      <created>1565584194584</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1565584194584</updated>
+    </task>
+    <task id="LOCAL-00019" summary="the file was unversioned">
+      <created>1565585175121</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1565585175121</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -470,7 +471,6 @@
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.41602466" visible="true" weight="0.25663027" />
       <window_info id="Structure" order="1" sideWeight="0.5839754" side_tool="true" weight="0.25663027" />
       <window_info id="Favorites" order="2" sideWeight="0.5839754" side_tool="true" weight="0.25663027" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32973805" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49921995" visible="true" weight="0.3266564" />
@@ -482,6 +482,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3266564" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50078005" side_tool="true" weight="0.3266564" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3266564" />
+      <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -563,7 +564,9 @@
     <MESSAGE value="fixed a bug about re-clicking colored tiles" />
     <MESSAGE value="altered player names" />
     <MESSAGE value="huh" />
-    <option name="LAST_COMMIT_MESSAGE" value="huh" />
+    <MESSAGE value="fixed a major bug about connections,&#10;added a function connection2" />
+    <MESSAGE value="the file was unversioned" />
+    <option name="LAST_COMMIT_MESSAGE" value="the file was unversioned" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -571,23 +574,18 @@
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <condition expression="tile_clicked" language="Python" />
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>218</line>
+          <line>223</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>216</line>
+          <line>221</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>217</line>
+          <line>222</line>
           <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../../../connection.py</url>
-          <line>28</line>
-          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -673,34 +671,25 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/connection2.py" />
-    <entry file="file://$PROJECT_DIR$/../../../connection.py">
+    <entry file="file://$PROJECT_DIR$/../../../connection.py" />
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" selection-end-line="35" selection-end-column="22" />
+        <state relative-caret-position="92">
+          <caret line="193" column="14" selection-start-line="193" selection-start-column="14" selection-end-line="193" selection-end-column="14" />
           <folding>
-            <marker date="1565584116567" expanded="true" signature="28:33" ph="..." />
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1565593120526" expanded="true" signature="106:1427" ph="..." />
+            <marker date="1565593120526" expanded="true" signature="953:1104" ph="..." />
+            <marker date="1565593120526" expanded="true" signature="1446:4937" ph="..." />
+            <marker date="1565593120526" expanded="true" signature="2371:2769" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/connection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="45" column="27" lean-forward="true" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="218" column="24" lean-forward="true" selection-start-line="218" selection-start-column="24" selection-end-line="218" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1565582045917" expanded="true" signature="106:1427" ph="..." />
-            <marker date="1565582045917" expanded="true" signature="953:1104" ph="..." />
-            <marker date="1565582045917" expanded="true" signature="1446:4905" ph="..." />
-            <marker date="1565582045917" expanded="true" signature="2371:2769" ph="..." />
-          </folding>
+        <state relative-caret-position="1035">
+          <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
         </state>
       </provider>
     </entry>
