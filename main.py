@@ -121,7 +121,9 @@ def show_win_screen(surf, color_, win, pos, fps):
 
     fps_clock = pygame.time.Clock()
 
-    pygame.mixer.music.play(3)
+    pygame.mixer.music.fadeout(3000)
+    # pygame.mixer.music.load("audio\\triumph.wav")
+    # pygame.mixer.music.play(3)
 
     while True:
         surf.fill((255, 255, 255))
@@ -197,7 +199,10 @@ def main():
 
     old_tile_clicked = None
 
-    pygame.mixer.music.load("audio\\piano2.ogg")
+    audio = ("audio\\bgmusic.ogg", "audio\\piano2.ogg", "audio\\bgmusic0.ogg")
+    pygame.mixer.music.load(random.choice(audio))
+    pygame.mixer.music.play()
+    pygame.mixer.music.set_endevent(USEREVENT)
 
     while True:  # MAIN LOOP
 
@@ -216,6 +221,9 @@ def main():
                             tile_clicked = (tile.tile_x, tile.tile_y)
                             old_tile_clicked = tile_clicked
                             turn.make_move()  # TODO detect invalid moves
+            elif event.type == USEREVENT:
+                pygame.mixer.music.load(random.choice(audio))
+                pygame.mixer.music.play()
 
         # UPDATE GAME STATE
         connections1 = connection.connection2(tiles, lambda a: a.own is True)
